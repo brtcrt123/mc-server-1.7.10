@@ -1,0 +1,143 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 23.07.2021 19:21
+Description: Exception in server tick loop
+
+Missing Mods:
+	Waila : any
+
+cpw.mods.fml.common.MissingModsException
+	at cpw.mods.fml.common.Loader.sortModList(Loader.java:243)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:493)
+	at cpw.mods.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:87)
+	at cpw.mods.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:314)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:117)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_301, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1362514920 bytes (1299 MB) / 1539309568 bytes (1468 MB) up to 3782737920 bytes (3607 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 106 mods loaded, 98 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	U	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	U	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	U	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	U	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	U	CodeChickenCore{1.0.7.48} [CodeChicken Core] (minecraft.jar) 
+	U	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	U	OpenComputers|Core{1.7.5.1290} [OpenComputers (Core)] (minecraft.jar) 
+	U	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	U	securitycraft{v1.8.13} [SecurityCraft] ([1.7.10] SecurityCraft v1.8.13.jar) 
+	U	WailaAddonBC{1.0.5.1} [WailaAddonBC] ([1.7.10]WailaAddonBC-1.0.5.1.jar) 
+	U	ActuallyAdditions{1.7.10-r21} [Actually Additions] (ActuallyAdditions-1.7.10-r21.jar) 
+	U	ae2stuff{0.5.0.56} [AE2 Stuff] (ae2stuff-0.5.0.56-mc1.7.10.jar) 
+	U	AgriCraft{1.7.10-1.5.0} [AgriCraft] (AgriCraft-1.7.10-1.5.0.jar) 
+	U	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	U	bdlib{1.9.4.109} [BD Lib] (bdlib-1.9.4.109-mc1.7.10.jar) 
+	U	betterbuilderswands{0.8.1} [Better Builder's Wands] (BetterBuildersWands-0.8.1-1.7.10r92+aec06c3.jar) 
+	U	BigReactors{0.4.3A} [Big Reactors] (BigReactors-0.4.3A.jar) 
+	U	BiomesOPlenty{2.1.0} [Biomes O' Plenty] (BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar) 
+	U	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	U	BrandonsCore{1.0.0.12} [Brandon's Core] (BrandonsCore-1.0.0.12.jar) 
+	U	BuildCraft|Core{7.1.23} [BuildCraft] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Transport{7.1.23} [BC Transport] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Factory{7.1.23} [BC Factory] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Silicon{7.1.23} [BC Silicon] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Robotics{7.1.23} [BC Robotics] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Energy{7.1.23} [BC Energy] (buildcraft-7.1.23.jar) 
+	U	BuildCraft|Builders{7.1.23} [BC Builders] (buildcraft-7.1.23.jar) 
+	U	CarpentersBlocks{3.3.8.2} [Carpenter's Blocks] (Carpenter's Blocks v3.3.8.2 - MC 1.7.10.jar) 
+	U	ChestTransporter{2.0.6} [Chest Transporter] (ChestTransporter-1.7.10-2.0.6.jar) 
+	U	chisel{2.9.5.11} [Chisel] (Chisel-2.9.5.11.jar) 
+	U	chococraft{4.5.6} [ChocoCraft Plus] (ChocoCraftPlus-1.7.10-4.5.6.jar) 
+	U	CoFHCore{1.7.10R3.1.4} [CoFH Core] (CoFHCore-[1.7.10]3.1.4-329.jar) 
+	U	cosmeticarmorreworked{1.7.10-v6b} [CosmeticArmorReworked] (CosmeticArmorReworked-1.7.10-v6b.jar) 
+	U	MineTweaker3{3.1.0} [MineTweaker 3] (CraftTweaker-1.7.10-3.1.0-legacy.jar) 
+	U	DraconicEvolution{1.0.2h} [Draconic Evolution] (Draconic-Evolution-1.7.10-1.0.2h.jar) 
+	U	dsurround{1.0.6.4} [Dynamic Surroundings] (DynamicSurroundings-1.7.10-1.0.6.4.jar) 
+	U	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	U	EnderIO{1.7.10-2.3.0.429_beta} [Ender IO] (EnderIO-1.7.10-2.3.0.429_beta.jar) 
+	U	EnderStorage{1.4.7.37} [EnderStorage] (EnderStorage-1.7.10-1.4.7.37-universal.jar) 
+	U	EnderTanks{rev16-beta1} [EnderTanks] (EnderTanks-rev16-beta1.jar) 
+	U	extracells{2.4.0} [Extra Cells 2] (ExtraCells-1.7.10-2.4.0.jar) 
+	U	ExtraUtilities{1.2.12} [Extra Utilities] (extrautilities-1.2.12.jar) 
+	U	fastleafdecay{1.4} [Fast Leaf Decay] (FastLeafDecay-1.7.10-1.4.jar) 
+	U	gravestone{0.7.10.3} [Gravestone] (GraveStone Mod 0.7.10.3.jar) 
+	U	iChunUtil{4.2.3} [iChunUtil] (iChunUtil-4.2.3.jar) 
+	U	ImmersiveEngineering{0.7.7} [Immersive Engineering] (ImmersiveEngineering-0.7.7.jar) 
+	U	immersiveintegration{0.6.8} [Immersive Integration] (immersiveintegration-0.6.8.jar) 
+	U	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.827-experimental.jar) 
+	U	ironbackpacks{1.7.10-1.2.20} [Iron Backpacks] (IronBackpacks-1.7.10-1.2.20.jar) 
+	U	journeymap{5.1.4p2} [JourneyMap] (journeymap-1.7.10-5.1.4p2-unlimited.jar) 
+	U	je_calculation{0.3.4} [Just Enough Calculation] (JustEnoughCalculation-1.7.10-0.3.4.jar) 
+	U	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-1.7.10-0.3.2b.jar) 
+	U	Mekanism{9.1.1} [Mekanism] (Mekanism-1.7.10-9.1.1.1031.jar) 
+	U	MekanismGenerators{9.1.1} [MekanismGenerators] (MekanismGenerators-1.7.10-9.1.1.1031.jar) 
+	U	MekanismTools{9.1.1} [MekanismTools] (MekanismTools-1.7.10-9.1.1.1031.jar) 
+	U	MineFactoryReloaded{1.7.10R2.8.1} [MineFactory Reloaded] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatAppliedEnergistics{1.7.10R2.8.1} [MFR Compat: Applied Energistics] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatAtum{1.7.10R2.8.1} [MFR Compat: Atum] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatBackTools{1.7.10R2.8.1} [MFR Compat: BackTools] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatBuildCraft{1.7.10R2.8.1} [MFR Compat: BuildCraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatChococraft{1.7.10R2.8.1} [MFR Compat: Chococraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatExtraBiomes{1.7.10R2.8.1} [MFR Compat: ExtraBiomes] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatForestry{1.7.10R2.8.1} [MFR Compat: Forestry] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatForgeMicroblock{1.7.10R2.8.1} [MFR Compat: ForgeMicroblock] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatIC2{1.7.10R2.8.1} [MFR Compat: IC2] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatProjRed{1.7.10R2.8.1} [MFR Compat ProjectRed] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatRailcraft{1.7.10R2.8.1} [MFR Compat: Railcraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatSufficientBiomes{1.7.10R2.8.1} [MFR Compat: Sufficient Biomes] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatThaumcraft{1.7.10R2.8.1} [MFR Compat: Thaumcraft] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatThermalExpansion{1.7.10R2.8.1} [MFR Compat: Thermal Expansion] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatTConstruct{1.7.10R2.8.1} [MFR Compat: Tinkers' Construct] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	UD	MineFactoryReloaded|CompatTwilightForest{1.7.10R2.8.1} [MFR Compat: TwilightForest] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	MineFactoryReloaded|CompatVanilla{1.7.10R2.8.1} [MFR Compat: Vanilla] (MineFactoryReloaded-[1.7.10]2.8.1-174.jar) 
+	U	modtweaker2{0.9.6} [Mod Tweaker 2] (ModTweaker2-0.9.6.jar) 
+	U	morechisels{@VERSION@} [More Chisels] (MoreChisels-1.7.10-1.0-28.jar) 
+	U	Morpheus{1.7.10-1.6.21} [Morpheus] (Morpheus-1.7.10-1.6.21.jar) 
+	U	cfm{3.4.7} [§9MrCrayfish's Furniture Mod] (MrCrayfishFurnitureModv3.4.7(1.7.10).jar) 
+	U	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	U	neiintegration{1.1.2} [NEI Integration] (NEIIntegration-MC1.7.10-1.1.2.jar) 
+	U	NetherOres{1.7.10R2.3.1} [Nether Ores] (NetherOres-[1.7.10]2.3.1-22.jar) 
+	U	neresources{0.1.0.ManuallyBuilt} [Not Enough Resources] (NotEnoughResources-1.7.10-0.1.0-122.jar) 
+	U	OpenComputers{1.7.5.1290} [OpenComputers] (OpenComputers-MC1.7.10-1.7.5.1290-universal.jar) 
+	U	p455w0rdslib{1.0.4} [p455w0rd's Library] (p455w0rdslib-1.7.10-1.0.4.jar) 
+	U	harvestcraft{1.7.10j} [Pam's HarvestCraft] (Pam's HarvestCraft 1.7.10Lb.jar) 
+	U	PortalGun{4.0.0-beta-6} [PortalGun] (PortalGun-4.0.0-beta-6-fix-1.jar) 
+	U	rftools{4.23} [RFTools] (rftools-4.23.jar) 
+	U	servertabinfo{Final-b3} [Server Tab Info] (ServerTabInfo-1.7.10-Final-b3.jar) 
+	U	ShetiPhianCore{3.0.0} [ShetiPhian-Core] (ShetiPhianCore-1.7.10-3.0.0.jar) 
+	U	simplyjetpacks{1.5.3} [Simply Jetpacks] (SimplyJetpacks-MC1.7.10-1.5.3.jar) 
+	U	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-1.7.10-1.8.8.jar) 
+	U	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	U	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	U	ThermalDynamics{1.7.10R1.2.1} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.2.1-172.jar) 
+	U	ThermalExpansion{1.7.10R4.1.5} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.5-248.jar) 
+	U	ThermalFoundation{1.7.10R1.2.6} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.6-118.jar) 
+	U	ae2wct{1.7.10-rv3-1.8.7.4b} [AE2 Wireless Crafting Terminal] (WirelessCraftingTerminal-1.7.10-rv3-1.8.7.4b.jar) 
+	U	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	U	ForgeMicroblock{1.2.0.345} [Forge Microblocks] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	U	ForgeMultipart{1.2.0.345} [Forge Multipart] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	U	McMultipart{1.2.0.345} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

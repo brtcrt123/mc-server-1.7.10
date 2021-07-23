@@ -1,0 +1,202 @@
+[19:23:56] [Server thread/INFO]: Starting minecraft server version 1.7.10
+[19:23:57] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: Ýþleyici geçersiz
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_301]
+	at java.io.FileInputStream.read(Unknown Source) ~[?:1.8.0_301]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[?:1.8.0_301]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[?:1.8.0_301]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[?:1.8.0_301]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[?:1.8.0_301]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[?:1.8.0_301]
+	at java.io.InputStreamReader.read(Unknown Source) ~[?:1.8.0_301]
+	at java.io.BufferedReader.fill(Unknown Source) ~[?:1.8.0_301]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_301]
+	at java.io.BufferedReader.readLine(Unknown Source) ~[?:1.8.0_301]
+	at net.minecraft.server.dedicated.DedicatedServer$2.run(DedicatedServer.java:97) [lv.class:?]
+[19:24:33] [Server thread/INFO]: Loading properties
+[19:24:33] [Server thread/INFO]: Default game type: SURVIVAL
+[19:24:33] [Server thread/INFO]: Generating keypair
+[19:24:33] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:24:55] [Immersive Engineering Contributors Name Finder Thread/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@63cbdb26[id=e8b46b33-3e17-4b64-8d07-9af116df7d3b,name=<null>,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[minecraft_server.1.7.10.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:135) [minecraft_server.1.7.10.jar:?]
+	at blusunrize.immersiveengineering.common.CommonProxy.getNameFromUUID(CommonProxy.java:122) [CommonProxy.class:?]
+	at blusunrize.immersiveengineering.common.util.compat.BotaniaHelper$ThreadContributorToNameFormatter.run(BotaniaHelper.java:90) [BotaniaHelper$ThreadContributorToNameFormatter.class:?]
+Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alert.createSSLException(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.fatal(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.fatal(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.fatal(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLTransport.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivilegedWithCombiner(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[minecraft_server.1.7.10.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[minecraft_server.1.7.10.jar:?]
+	... 3 more
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.validator.PKIXValidator.engineValidate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.validator.Validator.validate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLTransport.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivilegedWithCombiner(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[minecraft_server.1.7.10.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[minecraft_server.1.7.10.jar:?]
+	... 3 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(Unknown Source) ~[?:1.8.0_301]
+	at java.security.cert.CertPathBuilder.build(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.validator.PKIXValidator.doBuild(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.validator.PKIXValidator.engineValidate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.validator.Validator.validate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLHandshake.consume(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.HandshakeContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.TransportContext.dispatch(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLTransport.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_301]
+	at java.security.AccessController.doPrivilegedWithCombiner(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[?:1.8.0_301]
+	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[minecraft_server.1.7.10.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[minecraft_server.1.7.10.jar:?]
+	... 3 more
+[19:24:58] [Server thread/WARN]: Failed to load user banlist: 
+java.io.FileNotFoundException: banned-players.json (Sistem belirtilen dosyayý bulamýyor)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_301]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_301]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_301]
+	at com.google.common.io.Files.newReader(Files.java:86) ~[guava-17.0.jar:?]
+	at net.minecraft.server.management.UserList.func_152679_g(SourceFile:124) ~[om.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.func_152620_y(SourceFile:99) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(SourceFile:25) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:211) [lt.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]
+[19:24:58] [Server thread/WARN]: Failed to load ip banlist: 
+java.io.FileNotFoundException: banned-ips.json (Sistem belirtilen dosyayý bulamýyor)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_301]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_301]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_301]
+	at com.google.common.io.Files.newReader(Files.java:86) ~[guava-17.0.jar:?]
+	at net.minecraft.server.management.UserList.func_152679_g(SourceFile:124) ~[om.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.func_152619_x(SourceFile:91) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(SourceFile:27) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:211) [lt.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]
+[19:24:58] [Server thread/WARN]: Failed to load operators list: 
+java.io.FileNotFoundException: ops.json (Sistem belirtilen dosyayý bulamýyor)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_301]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_301]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_301]
+	at com.google.common.io.Files.newReader(Files.java:86) ~[guava-17.0.jar:?]
+	at net.minecraft.server.management.UserList.func_152679_g(SourceFile:124) ~[om.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.func_72417_t(SourceFile:107) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(SourceFile:29) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:211) [lt.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]
+[19:24:58] [Server thread/WARN]: Failed to load white-list: 
+java.io.FileNotFoundException: whitelist.json (Sistem belirtilen dosyayý bulamýyor)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_301]
+	at java.io.FileInputStream.open(Unknown Source) ~[?:1.8.0_301]
+	at java.io.FileInputStream.<init>(Unknown Source) ~[?:1.8.0_301]
+	at com.google.common.io.Files.newReader(Files.java:86) ~[guava-17.0.jar:?]
+	at net.minecraft.server.management.UserList.func_152679_g(SourceFile:124) ~[om.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.func_72418_v(SourceFile:123) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(SourceFile:30) [ls.class:?]
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:211) [lt.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:387) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [li.class:?]
+[19:24:58] [Server thread/INFO]: Preparing level "world"
+[19:25:00] [Server thread/INFO]: Preparing start region for level 0
+[19:25:01] [Server thread/INFO]: Preparing spawn area: 5%
+[19:25:02] [Server thread/INFO]: Preparing spawn area: 12%
+[19:25:04] [Server thread/INFO]: Preparing spawn area: 23%
+[19:25:05] [Server thread/INFO]: Preparing spawn area: 33%
+[19:25:06] [Server thread/INFO]: Preparing spawn area: 39%
+[19:25:07] [Server thread/INFO]: Preparing spawn area: 49%
+[19:25:08] [Server thread/INFO]: Preparing spawn area: 57%
+[19:25:09] [Server thread/INFO]: Preparing spawn area: 62%
+[19:25:10] [Server thread/INFO]: Preparing spawn area: 67%
+[19:25:11] [Server thread/INFO]: Preparing spawn area: 70%
+[19:25:12] [Server thread/INFO]: Preparing spawn area: 72%
+[19:25:13] [Server thread/INFO]: Preparing spawn area: 77%
+[19:25:14] [Server thread/INFO]: Preparing spawn area: 79%
+[19:25:15] [Server thread/INFO]: Preparing spawn area: 83%
+[19:25:16] [Server thread/INFO]: Preparing spawn area: 84%
+[19:25:17] [Server thread/INFO]: Preparing spawn area: 91%
+[19:25:18] [Server thread/INFO]: Preparing spawn area: 94%
+[19:25:19] [Server thread/INFO]: Done (21,521s)! For help, type "help" or "?"
+[19:25:26] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2613ms behind, skipping 52 tick(s)
+[19:27:55] [Server thread/INFO]: com.mojang.authlib.GameProfile@190c1864[id=<null>,name=brtcrt123,properties={},legacy=false] (/127.0.0.1:58093) lost connection: Disconnected
+[19:28:03] [Server thread/INFO]: Stopping the server
+[19:28:04] [Server thread/INFO]: Stopping server
+[19:28:04] [Server thread/INFO]: Saving players
+[19:28:04] [Server thread/INFO]: Saving worlds
+[19:28:04] [Server thread/INFO]: Saving chunks for level 'world'/Overworld
+[19:28:05] [Server thread/INFO]: Saving chunks for level 'world'/Nether
+[19:28:05] [Server thread/INFO]: Saving chunks for level 'world'/The End
+[19:28:05] [Server thread/INFO]: Saving chunks for level 'world'/The Outer Lands
+[19:28:05] [Server thread/INFO]: Saving chunks for level 'world'/Underdark
+[19:28:05] [Server thread/INFO]: Saving chunks for level 'world'/The Last Millenium
